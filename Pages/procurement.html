@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karibu Groceries LTD</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/dashboard.css" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <nav id="sidebar">
+        <div class="sidebar-header">Karibu Grocery</div>
+
+        <div class="section-label">HOME</div>
+        <a href="../Pages/dashboard.html" class="nav-link">
+          <i class="fa-solid fa-gauge-high"></i> Dashboard
+        </a>
+
+        <div class="section-label">FEATURES</div>
+
+        <a href="#" class="nav-link active"
+          ><i class="fa-solid fa-boxes-stacked"></i>Procurement</a
+        >
+        <a href="./selling3.html" class="nav-link"
+          ><i class="fa-solid fa-cart-shopping"></i> Sales Invoice</a
+        >
+        <a href="./credit1.html" class="nav-link"
+          ><i class="fa-solid fa-chart-line"></i> Sales Report</a
+        >
+        <a href="./credit1.html" class="nav-link"
+          ><i class="fa-solid fa-users"></i> Customers</a
+        >
+        <a href="./selling3.html" class="nav-link"
+          ><i class="fa-solid fa-gear"></i> Settings</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="fa-solid fa-power-off"></i> Logout</a
+        >
+      </nav>
+
+      <div id="content">
+        <!-- Start  -->
+        <!-- <div id="content" class="p-4 w-100">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="position-relative w-25">
+              <i
+                class="fa fa-search search-icon"
+                style="position: absolute; left: 10px; top: 10px; color: #aaa"
+              ></i>
+              <input
+                type="text"
+                class="form-control ps-5"
+                placeholder="Search"
+              />
+            </div>
+
+            <div class="d-flex align-items-center">
+              <div class="text-end me-2">
+                <div class="fw-bold small" style="line-height: 1">Masum</div>
+                <small class="text-muted">Admin</small>
+              </div>
+              <img
+                src="https://via.placeholder.com/40"
+                class="rounded-circle"
+                alt="User"
+                width="40"
+                height="40"
+              />
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end mb-4">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                  <a
+                    href="../Pages/dashboard.html"
+                    class="text-decoration-none text-muted"
+                    >Home</a
+                  >
+                </li>
+                <li class="breadcrumb-item active">Procurement</li>
+              </ol>
+            </nav>
+          </div>
+
+          <div class="px-0">
+            <h4 class="fw-bold" style="color: #3e2723">Sales Invoice</h4>
+            <div class="form-container shadow-sm p-4 bg-white rounded mt-4">
+              <h5 class="section-header mb-4">
+                <i class="fa-solid fa-pen-to-square me-2"></i>Record Procured
+                Produce
+              </h5>
+
+              <form id="procurementForm" class="row g-3" novalidate></form>
+            </div>
+          </div>
+        </div> -->
+
+        <div
+          class="d-flex justify-content-between align-items-center mb-4 px-3"
+        >
+          <div class="position-relative w-25">
+            <i class="fa fa-search search-icon"></i>
+            <input
+              type="text"
+              class="form-control search-bar"
+              placeholder="Search"
+            />
+          </div>
+
+          <div class="d-flex align-items-center">
+            <i class="fa-regular fa-bell me-4 fs-5 text-muted"></i>
+            <img width="20" class="me-2" />
+            <!-- <span class="me-4"
+              >Orban <i class="fa fa-chevron-down ms-1 small"></i
+            ></span> -->
+            <div class="d-flex align-items-center">
+              <img class="rounded-circle me-2" alt="Admin" />
+              <div>
+                <div class="fw-bold small" style="line-height: 1">Orban</div>
+                <!-- <small class="text-muted">Orban</small> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-end mb-4">
+          <h4 class="fw-bold" style="color: #3e2723">Procurement</h4>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item">
+                <a href="#" class="text-decoration-none text-muted">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Procurement
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <!-- End  -->
+
+        <div class="px-3">
+          <div class="form-container shadow-sm">
+            <h5 class="section-header">
+              <i class="fa-solid fa-pen-to-square me-2"></i>Record Procured
+              Produce
+            </h5>
+
+            <form id="procurementForm" class="row g-3" novalidate>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Name of Produce</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="produceName"
+                  required
+                  placeholder="e.g. Beans 01"
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Type of Produce</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="produceType"
+                  required
+                  pattern="[A-Za-z\s]{2,}"
+                  title="Alphabets only, minimum 2 characters"
+                  placeholder="e.g. Legumes"
+                />
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label fw-semibold">Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="procureDate"
+                  required
+                />
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label fw-semibold">Time</label>
+                <input
+                  type="time"
+                  class="form-control"
+                  id="procureTime"
+                  required
+                />
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label fw-semibold">Tonnage (Kgs)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="tonnage"
+                  required
+                  min="100"
+                  placeholder="Min 100kg"
+                />
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label fw-semibold">Cost (UgX)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="cost"
+                  required
+                  min="10000"
+                  placeholder="Min 10,000"
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Dealer Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="dealerName"
+                  required
+                  minlength="2"
+                  placeholder="Name of supplier"
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Contact (Phone)</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="contact"
+                  required
+                  pattern="[0-9]{10,12}"
+                  placeholder="e.g. 0700123456"
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Branch Intended</label>
+                <select class="form-select" id="branchName" required>
+                  <option value="" selected disabled>Select Branch</option>
+                  <option value="Maganjo">Maganjo</option>
+                  <option value="Matugga">Matugga</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold"
+                  >Price to be Sold At (UgX)</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="sellingPrice"
+                  required
+                  placeholder="Unit price for customers"
+                />
+              </div>
+
+              <div class="col-12 mt-4">
+                <button
+                  type="submit"
+                  class="btn btn-primary px-5 py-2 fw-bold"
+                  style="background-color: #3e2723; border: none"
+                >
+                  <i class="fa-solid fa-save me-2"></i> Record Procurement
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../JS/procurement.js"></script>
+  </body>
+</html>
