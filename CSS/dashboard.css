@@ -1,0 +1,121 @@
+:root {
+  --sidebar-color: #3E2723;
+  --bg-light: #f8f9fe;
+  --text-muted: #8898aa;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-light);
+  overflow-x: hidden;
+}
+
+/* Sidebar Styling */
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background-color: var(--sidebar-color);
+  color: white;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.sidebar-header {
+  padding: 2rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 12px 25px;
+  display: flex;
+  align-items: center;
+  border-radius: 0 25px 25px 0;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: white;
+  color: var(--sidebar-color) !important;
+}
+
+.nav-link i {
+  margin-right: 15px;
+  width: 20px;
+}
+
+.section-label {
+  padding: 20px 25px 10px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Main Content Styling */
+#content {
+  width: 100%;
+  padding: 20px;
+}
+
+.search-bar {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px 8px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  color: var(--text-muted);
+}
+
+/* Stat Cards */
+.stat-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.icon-box {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+/* Table Styling */
+.table-container {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.badge-due {
+  background-color: #ffecd2;
+  color: #ff9f43;
+}
+.badge-paid {
+  background-color: #d2f4f1;
+  color: #1abc9c;
+}
+
+.btn-print {
+  color: var(--sidebar-color);
+  /* background-color: #5e50d1; */
+  border-radius: 5px;
+  padding: 2px 8px;
+}
+
+
+

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karibu Groceries LTD</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/dashboard.css" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <nav id="sidebar">
+        <div class="sidebar-header">Karibu Grocery</div>
+
+        <div class="section-label">HOME</div>
+        <a href="#" class="nav-link active">
+          <i class="fa-solid fa-gauge-high"></i> Dashboard
+        </a>
+
+        <div class="section-label">FEATURES</div>
+
+        <a href="./dashboardProduce.html" class="nav-link"
+          ><i class="fa-solid fa-boxes-stacked"></i> Products</a
+        >
+        <a href="./selling3.html" class="nav-link"
+          ><i class="fa-solid fa-cart-shopping"></i> Sales Invoice</a
+        >
+        <a href="./credit1.html" class="nav-link"
+          ><i class="fa-solid fa-chart-line"></i> Sales Report</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="fa-solid fa-users"></i> Customers</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="fa-solid fa-gear"></i> Settings</a
+        >
+        <a href="#" class="nav-link"
+          ><i class="fa-solid fa-power-off"></i> Logout</a
+        >
+      </nav>
+
+      <div id="content">
+        <div
+          class="d-flex justify-content-between align-items-center mb-4 px-3"
+        >
+          <div class="position-relative w-25">
+            <i class="fa fa-search search-icon"></i>
+            <input
+              type="text"
+              class="form-control search-bar"
+              placeholder="Search"
+            />
+          </div>
+
+          <div class="d-flex align-items-center">
+            <i class="fa-regular fa-bell me-4 fs-5 text-muted"></i>
+            <img width="20" class="me-2" />
+            <span class="me-4"
+              >English <i class="fa fa-chevron-down ms-1 small"></i
+            ></span>
+            <div class="d-flex align-items-center">
+              <img class="rounded-circle me-2" alt="User" />
+              <div>
+                <div class="fw-bold small" style="line-height: 1">Masum</div>
+                <small class="text-muted">Admin</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-3">
+          <div class="d-flex justify-content-between align-items-end mb-4">
+            <h4 class="fw-bold" style="color: #3e2723">Dashboard</h4>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item">
+                  <a href="#" class="text-decoration-none text-muted">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Dashboard
+                </li>
+              </ol>
+            </nav>
+          </div>
+
+          <div class="row g-4 mb-5">
+            <div class="col-md-3">
+              <div
+                class="card stat-card d-flex flex-row align-items-center justify-content-between"
+              >
+                <div>
+                  <small class="text-muted">Total Revenue</small>
+                  <h4 class="fw-bold mb-0">105.42</h4>
+                </div>
+                <div
+                  class="icon-box"
+                  style="background: #e9e7ff; color: #5e50d1"
+                >
+                  <i class="fa fa-dollar-sign"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div
+                class="card stat-card d-flex flex-row align-items-center justify-content-between"
+              >
+                <div>
+                  <small class="text-muted">Total Sales</small>
+                  <h4 class="fw-bold mb-0">6</h4>
+                </div>
+                <div
+                  class="icon-box"
+                  style="background: #d1f7f3; color: #1abc9c"
+                >
+                  <i class="fa fa-shopping-cart"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div
+                class="card stat-card d-flex flex-row align-items-center justify-content-between"
+              >
+                <div>
+                  <small class="text-muted">Total Products</small>
+                  <h4 class="fw-bold mb-0">3</h4>
+                </div>
+                <div
+                  class="icon-box"
+                  style="background: #fff4e5; color: #ff9f43"
+                >
+                  <i class="fa fa-archive"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div
+                class="card stat-card d-flex flex-row align-items-center justify-content-between"
+              >
+                <div>
+                  <small class="text-muted">Customer</small>
+                  <h4 class="fw-bold mb-0">1</h4>
+                </div>
+                <div
+                  class="icon-box"
+                  style="background: #ffe5ed; color: #ff5e8e"
+                >
+                  <i class="fa fa-user"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <h5 class="fw-bold mb-4">Five Recent Sales</h5>
+            <table class="table table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>#</th>
+                  <th>Code</th>
+                  <th>Date</th>
+                  <th>Grand Total</th>
+                  <th>Status</th>
+                  <th>Print</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>1530804450109</td>
+                  <td>19/01/2021</td>
+                  <td>29.59</td>
+                  <td><span class="badge badge-due">Due</span></td>
+                  <td>
+                    <a href="#" class="btn btn-print btn-sm"
+                      ><i class="fa fa-print"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>1527863276313</td>
+                  <td>15/01/2021</td>
+                  <td>12</td>
+                  <td><span class="badge badge-due">Due</span></td>
+                  <td>
+                    <a href="#" class="btn btn-print btn-sm"
+                      ><i class="fa fa-print"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>1530251351216</td>
+                  <td>05/01/2021</td>
+                  <td>27.58</td>
+                  <td><span class="badge badge-paid">Paid</span></td>
+                  <td>
+                    <a href="#" class="btn btn-print btn-sm"
+                      ><i class="fa fa-print"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>1527872625625</td>
+                  <td>30/12/2020</td>
+                  <td>25.50</td>
+                  <td><span class="badge badge-paid">Paid</span></td>
+                  <td>
+                    <a href="#" class="btn btn-print btn-sm"
+                      ><i class="fa fa-print"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>1530367362827</td>
+                  <td>25/12/2020</td>
+                  <td>30.75</td>
+                  <td><span class="badge badge-paid">Paid</span></td>
+                  <td>
+                    <a href="#" class="btn btn-print btn-sm"
+                      ><i class="fa fa-print"></i
+                    ></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
