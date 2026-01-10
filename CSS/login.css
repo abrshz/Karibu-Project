@@ -1,5 +1,5 @@
 :root {
-  --primary-green: #3E2723;
+  --primary-brown: #3E2723;   
   --dark-text: #2c3e50;
   --light-bg: #f9f9f9;
 }
@@ -19,6 +19,7 @@ body {
   justify-content: center;
 }
 
+/* Container */
 .container {
   display: flex;
   width: 900px;
@@ -29,10 +30,10 @@ body {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-/* Left Side: Image */
+/* Left Side: Branding */
 .image-section {
   flex: 1;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80");
   background-size: cover;
   background-position: center;
@@ -46,6 +47,7 @@ body {
 .image-section h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 .image-section p {
   font-size: 1.1rem;
@@ -64,43 +66,53 @@ body {
 .form-container h2 {
   margin-bottom: 25px;
   color: var(--dark-text);
+  font-weight: 600;
 }
 
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 .input-group label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   font-size: 0.9rem;
+  color: var(--primary-brown);
 }
 
-input {
+/* Inputs */
+input, select {
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 5px;
   outline: none;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-input:focus {
-  border-color: var(--primary-green);
+input:focus, select:focus {
+  border-color: var(--primary-brown);
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
 }
 
+/* Buttons */
 .btn {
   width: 100%;
   padding: 12px;
-  /* background: var(--primary-green); */
-  background: #3E2723;
+  background: var(--primary-brown);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   margin-top: 10px;
+  transition: background 0.3s;
 }
 
+.btn:hover {
+  background: var(--primary-brown);
+}
+
+/* Toggle text */
 .toggle-text {
   text-align: center;
   margin-top: 20px;
@@ -108,32 +120,80 @@ input:focus {
 }
 
 .toggle-text span {
-  color: var(--primary-green);
+  color: var(--primary-brown);
   cursor: pointer;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
+.toggle-text span:hover {
+  color: var(--primary-brown);
+}
+
+/* Hidden form */
 .hidden {
   display: none;
 }
 
-/* Password  */
-
+/* Password field */
 .password-container {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .password-container input {
-    width: 100%;
-    padding: 10px;
-    padding-right: 40px; /* Space for the icon */
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; /* Space for the icon */
 }
 
 .toggle-icon {
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-    user-select: none;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.1rem;
+}
+
+/* Styling the select element itself */
+#login-role {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #3E2723; /* This sets the color of the selected text */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Optional: Ensures the dropdown options also have the same color */
+#login-role option {
+  color: #3E2723;
+  background-color: #fff;
+}
+
+/* Maintains the color when the user is interacting with the element */
+#login-role:focus {
+  outline: none;
+  border-color: #3E2723;
+  color: #3E2723;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+  }
+
+  .image-section {
+    height: 200px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .form-section {
+    padding: 30px;
+  }
 }
