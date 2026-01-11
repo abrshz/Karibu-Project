@@ -1,0 +1,23 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+*.code-workspace
+
+# Build output (if applicable)
+dist/
+build/
+
+# Environment files (if used)
+.env
+
+# Package lock (optional, if you prefer not to commit it)
+package-lock.json
